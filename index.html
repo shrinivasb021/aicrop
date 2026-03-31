@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AI Crop Health Detector</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+<h1 class="title">
+
+🌿 Smart Crop Disease Detector
+
+</h1>
+
+<p class="subtitle">
+
+Upload leaf image to detect disease instantly
+
+</p>
+
+<div class="upload-box"
+id="dropArea">
+
+<input
+type="file"
+id="fileInput"
+hidden>
+
+<p>
+
+Drag & Drop Image
+
+</p>
+
+<button onclick="selectFile()">
+
+Choose Image
+
+</button>
+
+</div>
+
+<button
+class="detect-btn"
+onclick="uploadImage()">
+
+Detect Disease
+
+</button>
+
+<div id="loader"
+class="loader hidden">
+
+AI Scanning...
+
+</div>
+
+<div id="result"
+class="result hidden">
+
+<h2 id="disease"></h2>
+
+<div class="progress">
+
+<div id="confidenceBar"
+class="progress-bar">
+
+</div>
+
+</div>
+
+<p id="treatment"></p>
+
+</div>
+
+</div>
+
+<script
+src="{{ url_for('static',
+filename='script.js') }}">
+</script>
+
+</body>
+
+</html>
